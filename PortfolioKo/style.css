@@ -1,0 +1,755 @@
+
+/* ========================================
+   GENERAL SETTINGS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #240B16;
+    color: #F5E6EF;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   NAVIGATION BAR
+======================================== */
+
+header {
+    background-color: #4A1028;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #762C55;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: #F5E6EF;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #D9A5F5;
+}
+
+
+/* ========================================
+   HOME SECTION
+======================================== */
+
+.hero {
+    min-height: 450px;
+    padding: 100px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #4A1028,
+        #572080,
+        #310D26
+    );
+
+    color: #FFFFFF;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.eyebrow {
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: #E7C6F5;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.hero h1 span {
+    color: #D9A5F5;
+}
+
+.hero h2 {
+    font-size: 21px;
+    color: #F5DCEB;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #F5E6EF;
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.btn {
+    display: inline-block;
+
+    background: #702A9E;
+    color: #FFFFFF;
+
+    padding: 12px 24px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+
+    border: 1px solid #A66BC7;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #8B40BA;
+    transform: translateY(-3px);
+}
+
+.hero .btn {
+    background: #F1D9EA;
+    color: #4A1028;
+    border: none;
+}
+
+.hero .btn:hover {
+    background: #E5CDE0;
+}
+
+
+/* ========================================
+   GENERAL SECTIONS
+======================================== */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 65px 24px;
+}
+
+.section > h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #D9A5F5;
+}
+
+
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+#about p {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+    color: #F5E6EF;
+}
+
+.about-photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.about-photo {
+    width: 220px;
+    height: 220px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 5px solid #7136A3;
+
+    box-shadow: 0 0 25px rgba(139, 64, 186, 0.35);
+
+    transition: transform 0.3s ease;
+}
+
+.about-photo:hover {
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   SKILLS SECTION
+======================================== */
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110px;
+}
+
+#rotating-skill {
+    font-size: 42px;
+    font-weight: bold;
+    color: #D9A5F5;
+
+    opacity: 1;
+
+    transition: opacity 0.8s ease-in-out;
+}
+
+#rotating-skill.fade-out {
+    opacity: 0;
+}
+
+
+/* ========================================
+   EXISTING PROJECT CARDS
+======================================== */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background-color: #3B1A30;
+
+    padding: 35px;
+
+    border-radius: 20px;
+    border: 1px solid #713B60;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.project-card h3 {
+    color: #D9A5F5;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #F5E6EF;
+    font-size: 17px;
+}
+
+
+/* ========================================
+   IRONCLAD SHOWCASE
+======================================== */
+
+.ironclad-showcase {
+    margin-top: 85px;
+    padding-top: 55px;
+    border-top: 2px solid #713B60;
+}
+
+.showcase-heading {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.showcase-label {
+    color: #D9A5F5;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.showcase-heading h2 {
+    color: #D9A5F5;
+    font-size: clamp(28px, 4vw, 38px);
+    margin-bottom: 15px;
+}
+
+.showcase-description {
+    color: #F5E6EF;
+    font-size: 17px;
+}
+
+
+/* ========================================
+   IRONCLAD IMAGE GALLERY
+======================================== */
+
+.ironclad-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.ironclad-card {
+    background-color: #3B1A30;
+
+    border: 1px solid #713B60;
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ironclad-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+/* CLICKABLE IMAGE BUTTON */
+
+.image-open {
+    display: block;
+    width: 100%;
+
+    border: none;
+    padding: 0;
+
+    cursor: zoom-in;
+    background: transparent;
+
+    overflow: hidden;
+}
+
+
+/* GALLERY IMAGE */
+
+.ironclad-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    display: block;
+    object-fit: contain;
+
+    background-color: #21151F;
+
+    transition: transform 0.4s ease;
+}
+
+.ironclad-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* IMAGE CAPTION */
+
+.ironclad-card figcaption {
+    padding: 16px;
+
+    text-align: center;
+
+    color: #D9A5F5;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.gallery-note {
+    text-align: center;
+    margin-top: 25px;
+
+    color: #C9AFC1;
+    font-size: 14px;
+}
+
+
+/* ========================================
+   FLOATING IMAGE VIEWER
+======================================== */
+
+.lightbox {
+    display: none;
+
+    position: fixed;
+    z-index: 9999;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(10, 3, 10, 0.94);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+
+    backdrop-filter: blur(5px);
+}
+
+
+/* SHOW VIEWER */
+
+.lightbox.active {
+    display: flex;
+}
+
+
+/* ENLARGED IMAGE CONTAINER */
+
+.lightbox-content {
+    max-width: 85%;
+    max-height: 90%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    animation: zoomIn 0.3s ease;
+}
+
+
+/* ENLARGED IMAGE */
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border: 2px solid #713B60;
+    border-radius: 10px;
+
+    box-shadow: 0 0 30px rgba(139, 64, 186, 0.3);
+
+    background-color: #21151F;
+}
+
+
+/* IMAGE CAPTION */
+
+#lightbox-caption {
+    color: #D9A5F5;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+/* IMAGE COUNTER */
+
+#lightbox-counter {
+    color: #C9AFC1;
+
+    font-size: 14px;
+
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
+
+.lightbox-close {
+    position: absolute;
+
+    top: 20px;
+    right: 35px;
+
+    font-size: 45px;
+    font-weight: bold;
+
+    color: #FFFFFF;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    z-index: 10002;
+
+    transition: color 0.3s, transform 0.3s;
+}
+
+.lightbox-close:hover {
+    color: #D9A5F5;
+    transform: scale(1.2);
+}
+
+
+/* ========================================
+   LEFT AND RIGHT NAVIGATION ARROWS
+======================================== */
+
+.lightbox-arrow {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(74, 16, 40, 0.85);
+
+    color: #FFFFFF;
+
+    border: 1px solid #A66BC7;
+    border-radius: 50%;
+
+    width: 55px;
+    height: 55px;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10001;
+
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.lightbox-arrow:hover {
+    background: #702A9E;
+    color: #FFFFFF;
+    transform: translateY(-50%) scale(1.12);
+}
+
+.lightbox-arrow:focus-visible,
+.lightbox-close:focus-visible {
+    outline: 3px solid #D9A5F5;
+    outline-offset: 4px;
+}
+
+
+/* LEFT ARROW */
+
+.lightbox-prev {
+    left: 25px;
+}
+
+
+/* RIGHT ARROW */
+
+.lightbox-next {
+    right: 25px;
+}
+
+
+/* ========================================
+   IMAGE OPENING ANIMATION
+======================================== */
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #F5E6EF;
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background-color: #4A1028;
+
+    color: #F5E6EF;
+
+    text-align: center;
+
+    padding: 22px;
+
+    border-top: 1px solid #762C55;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+
+    .projects-container,
+    .ironclad-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* NAVIGATION */
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+
+    /* HOME */
+
+    .hero {
+        padding: 75px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-container,
+    .ironclad-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+
+
+    /* SKILLS */
+
+    #rotating-skill {
+        font-size: 34px;
+    }
+
+
+    /* PROFILE PICTURE */
+
+    .about-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+
+    /* FLOATING VIEWER */
+
+    .lightbox {
+        padding: 15px;
+    }
+
+    .lightbox-content {
+        max-width: 78%;
+    }
+
+    .lightbox-content img {
+        max-height: 75vh;
+    }
+
+
+    /* CLOSE BUTTON */
+
+    .lightbox-close {
+        top: 10px;
+        right: 18px;
+        font-size: 38px;
+    }
+
+
+    /* NAVIGATION ARROWS */
+
+    .lightbox-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+
+}
+
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
